@@ -65,6 +65,13 @@ docker cp ./db_backup.dump <target_container_name>:/tmp/db_backup.dump
 docker exec -it <target_container_name> bash
 pg_restore -U <your_postgres_user> -d <your_database_name> -F c /tmp/db_backup.dump
 
+11. To test Web Socket 
+cd to client 
+node socketClient.js
+go to postman and create a websocket connection with url ws://localhost:3000
+click connect 
+when post is created a console can be seen to connected client
+
 Troubleshooting
 If you're having issues with TypeScript compilation, make sure tsconfig.json is properly configured and all dependencies are installed.
 Ensure that any required environment variables are set correctly in the .env file.
